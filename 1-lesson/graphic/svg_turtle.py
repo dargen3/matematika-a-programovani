@@ -15,6 +15,9 @@ class SvgTurtle:
     def position(self):
         return self.x, self.y
 
+    def line(self, x1, y1, x2, y2):
+        self.lines.append((x1, y1, x2, y2))
+
     def left(self, angle):
         self.heading -= angle
 
@@ -46,6 +49,9 @@ class SvgTurtle:
 
     def point(self):
         self.lines.append((self.x, self.y, self.x, self.y))
+
+    def set_angle(self, angle):
+        self.heading = angle
 
     def set_pos(self, x, y, write=False, back=False):
         if write:
