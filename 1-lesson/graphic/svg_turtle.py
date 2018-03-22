@@ -11,6 +11,7 @@ class SvgTurtle:
         self.y = y
         self.heading = 0.0
         self.lines = []
+        self.points = []
 
     def position(self):
         return self.x, self.y
@@ -47,8 +48,8 @@ class SvgTurtle:
         tx, ty = turtle.position()
         self.lines.append((self.x, self.y, tx, ty))
 
-    def point(self):
-        self.lines.append((self.x, self.y, self.x, self.y))
+    def point(self, x, y):
+        self.points.append((x, y))
 
     def set_angle(self, angle):
         self.heading = angle
@@ -65,4 +66,6 @@ class SvgTurtle:
             file.write("<svg>\n")
             for x1, y1, x2, y2 in self.lines:
                 file.write("<line x1=\"{}\" y1=\"{}\" x2=\"{}\" y2=\"{}\" style=\"stroke:black;stroke-width:1\" />\n".format(x1, y1, x2, y2))
+            for x, y in self.points:
+                file.write("<circle cx=\"{}\" cy=\"{}\" r=\"10\" stroke=\"black\" stroke-width=\"1\" fill=\"red\" />".format(x,y))
             file.write("</svg>\n")
