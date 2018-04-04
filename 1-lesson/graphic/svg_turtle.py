@@ -1,5 +1,5 @@
 import math
-
+from math import acos, degrees
 
 class SvgTurtle:
     """
@@ -33,23 +33,17 @@ class SvgTurtle:
         if not back:
             self.x, self.y = nx, ny
 
-    def turn_to_turtle(self, turtle):
-        t_x, t_y = turtle.position()
-        if t_x > self.x and t_y > self.y:
-            self.heading = math.degrees(math.sin(abs(self.y - t_y) / (math.sqrt((t_x - self.x) ** 2 + (t_y - self.y) ** 2))))
-        elif t_x > self.x and t_y < self.y:
-            self.heading = 360 - math.degrees(math.sin(abs(self.y - t_y) / (math.sqrt((t_x - self.x) ** 2 + (t_y - self.y) ** 2))))
-        elif t_x < self.x and t_y > self.y:
-            self.heading = 180 - math.degrees(math.sin(abs(self.y - t_y) / (math.sqrt((t_x - self.x) ** 2 + (t_y - self.y) ** 2))))
-        elif t_x < self.x and t_y < self.y:
-            self.heading = 180 + math.degrees(math.sin(abs(self.y - t_y) / (math.sqrt((t_x - self.x) ** 2 + (t_y - self.y) ** 2))))
 
     def connector(self, turtle):
         tx, ty = turtle.position()
         self.lines.append((self.x, self.y, tx, ty))
 
+
     def point(self, x, y):
         self.points.append((x, y))
+
+    def self_point(self):
+        self.points.append((self.x, self.y))
 
     def set_angle(self, angle):
         self.heading = angle
@@ -65,7 +59,7 @@ class SvgTurtle:
         with open(filename, "w") as file:
             file.write("<svg>\n")
             for x1, y1, x2, y2 in self.lines:
-                file.write("<line x1=\"{}\" y1=\"{}\" x2=\"{}\" y2=\"{}\" style=\"stroke:black;stroke-width:1\" />\n".format(x1, y1, x2, y2))
+                file.write("<line x1=\"{}\" y1=\"{}\" x2=\"{}\" y2=\"{}\" style=\"stroke:black;stroke-width:3\" />\n".format(x1, y1, x2, y2))
             for x, y in self.points:
-                file.write("<circle cx=\"{}\" cy=\"{}\" r=\"10\" stroke=\"black\" stroke-width=\"1\" fill=\"red\" />".format(x,y))
+                file.write("<circle cx=\"{}\" cy=\"{}\" r=\"1\" stroke=\"black\" stroke-width=\"1\" fill=\"red\" />".format(x,y))
             file.write("</svg>\n")
