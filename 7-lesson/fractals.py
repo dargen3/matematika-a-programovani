@@ -73,4 +73,4 @@ def make_video():
 
 fractal("Mandelbrot", 0, 1, 0, 1, "Mandelbrot.png")
 fractal("Newton", 0, 1, 0, 1, "Newton.png")
-#   make_video()
+make_video()

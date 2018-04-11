@@ -12,6 +12,13 @@ class SvgTurtle:
         self.heading = 0.0
         self.lines = []
         self.points = []
+        self.homex = x
+        self.homey = y
+
+    def home(self):
+        self.x = self.homex
+        self.y = self.homey
+        self.heading = 0
 
     def position(self):
         return self.x, self.y
