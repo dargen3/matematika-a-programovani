@@ -64,7 +64,8 @@ class SvgTurtle:
 
     def save(self, filename):
         with open(filename, "w") as file:
-            file.write("<svg>\n")
+            file.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>")
+            file.write("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n")
             for x1, y1, x2, y2 in self.lines:
                 file.write("<line x1=\"{}\" y1=\"{}\" x2=\"{}\" y2=\"{}\" style=\"stroke:black;stroke-width:3\" />\n".format(x1, y1, x2, y2))
             for x, y in self.points:

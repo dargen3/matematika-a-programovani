@@ -23,4 +23,4 @@ def svg_star(lines, tops, radius):  # save svg file with star
                 turtle.connector(end_of_line)
     turtle.save("star.svg")
 
-svg_star(20, 3, 400)
+svg_star(20, 4, 400)
