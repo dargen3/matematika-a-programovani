@@ -1,4 +1,3 @@
-import numpy as np
 from math import cos, sin, radians
 import sys
 sys.path.insert(0, '/home/dargen3/python/matematika_a_programovani/1-lesson/graphic/')
@@ -12,35 +11,30 @@ class ATr:
         for x in self.input_points:
             self.all_homogenous_coordinates.append((x[0], x[1], 1))
 
+    def _calculate(self):
+        for index, point in enumerate(self.input_points):
+            result = []
+            for x in range(3):
+                result.append(sum([self.matrix[x][y] * self.all_homogenous_coordinates[index][y] for y in range(3)]))
+            self.transformed_points.append((result[0], result[1]))
+        return self.transformed_points
 
     def translation(self, x_shift, y_shift):
-        for index, point in enumerate(self.input_points):
-            matrix = [[1, 0, x_shift], [0, 1, y_shift], [0, 0, 1]]
-            result = np.dot(matrix, self.all_homogenous_coordinates[index])
-            self.transformed_points.append((result[0], result[1]))
-        return self.transformed_points
+        self.matrix = [[1, 0, x_shift], [0, 1, y_shift], [0, 0, 1]]
+        return self._calculate()
 
     def scaling(self, x_scale, y_scale):
-        for index, point in enumerate(self.input_points):
-            matrix = [[x_scale, 0, 0], [0, y_scale, 0], [0, 0, 1]]
-            result = np.dot(matrix, self.all_homogenous_coordinates[index])
-            self.transformed_points.append((result[0], result[1]))
-        return self.transformed_points
+        self.matrix = [[x_scale, 0, 0], [0, y_scale, 0], [0, 0, 1]]
+        return self._calculate()
 
     def rotation(self, angle):
         angle = radians(angle)
-        for index, point in enumerate(self.input_points):
-            matrix = [[cos(angle), -sin(angle), 0], [sin(angle), cos(angle), 0], [0, 0, 1]]
-            result = np.dot(matrix, self.all_homogenous_coordinates[index])
-            self.transformed_points.append((result[0], result[1]))
-        return self.transformed_points
+        self.matrix = [[cos(angle), -sin(angle), 0], [sin(angle), cos(angle), 0], [0, 0, 1]]
+        return self._calculate()
 
     def own(self, a, b, c, d, e, f):
-        for index, point in enumerate(self.input_points):
-            matrix = [[a, b, e], [c, d, f], [0, 0, 1]]
-            result = np.dot(matrix, self.all_homogenous_coordinates[index])
-            self.transformed_points.append((result[0], result[1]))
-        return self.transformed_points
+        self.matrix = [[a, b, e], [c, d, f], [0, 0, 1]]
+        return self._calculate()
 
 
 
@@ -69,9 +63,9 @@ def affine_transformation(points, iteration=1, translation=False, rotation=False
     else:
         return transformed_points
 
-#
+
 points = [[0,0],[0,500],[500,500],[500,0]]
-# affine_transformation(points, iterations=50, rotation=20, scaling=(0.9, 0.9), translation=(5, 10), write=True)
+affine_transformation(points, iteration=50, rotation=20, scaling=(0.9, 0.9), translation=(5, 10), write=True)
 
 
 
@@ -84,14 +78,9 @@ def MRCM(points, transformations, iterations, name):
                 new_points.append(affine_transformation(point, **tr))
         points = new_points
     set_of_points = points
-
-    # print(set_of_points)
-    # from sys import exit
-    # exit()
     x = 500
     y = 500
     turtle = SvgTurtle(x, y)
-
     for points in set_of_points:
         turtle.set_pos(points[0][0] + x, points[0][1] + y)
         for point in points + [points[0]]:
