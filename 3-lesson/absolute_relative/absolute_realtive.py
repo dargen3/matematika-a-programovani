@@ -18,7 +18,7 @@ def squares():
         length = length * cor_length
     zofka.save("squares_in_squares.svg")
 
-#squares()
+# squares()
 
 
 def n_square(zofka, n):
@@ -27,6 +27,7 @@ def n_square(zofka, n):
         zofka.forward(50)
         zofka.left(180 - angle)
 
+
 def blow():
     zofka = SvgTurtle(500, 500)
     for x in range(12):
@@ -34,7 +35,8 @@ def blow():
         n_square(zofka, 12)
     zofka.save("blow.svg")
 
-#blow()
+
+# blow()
 
 def ring_with_lines():
     zofka = SvgTurtle(500, 500)
@@ -45,7 +47,7 @@ def ring_with_lines():
         zofka.line(500 + value, y, 500 - value, y)
     zofka.save("ring_lines.svg")
 
-#ring_with_lines()
+# ring_with_lines()
 
 
 def triangles():
@@ -66,7 +68,7 @@ def triangles():
         length += 30
     zofka.save("triangles.svg")
 
-#triangles()
+# triangles()
 
 
 def pentagram_relative():
@@ -82,7 +84,7 @@ def pentagram_relative():
         zofka.left(180 - angle)
     zofka.save("relative_pentagram.svg")
 
-#pentagram_relative()
+# pentagram_relative()
 
 
 def pentagram_absolute():
@@ -100,10 +102,3 @@ def pentagram_absolute():
     zofka.save("absolute_pentragram.svg")
 
 pentagram_absolute()
-
-
-
-
-
-
-

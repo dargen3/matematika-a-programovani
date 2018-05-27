@@ -8,6 +8,7 @@ def replacing(some_list, x, y):
     some_list[y] = helped_variable
     return some_list
 
+
 def permutation(list_for_permutations):
     permutations = []
     sum_of_item = len(list_for_permutations)
@@ -15,7 +16,7 @@ def permutation(list_for_permutations):
         if period % 2 == 0:
             a = -1
             b = -1
-            c = sum_of_item -1
+            c = sum_of_item - 1
         else:
             a = 1
             b = 0
@@ -33,7 +34,3 @@ def permutation(list_for_permutations):
 
 if __name__ == '__main__':
     pprint(permutation([x for x in range(6)]))
-
-
-
-

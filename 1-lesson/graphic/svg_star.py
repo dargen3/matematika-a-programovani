@@ -13,8 +13,8 @@ def svg_star(lines, tops, radius):  # save svg file with star
             turtle.set_pos(400, 400)
             turtle.left(360/tops * top)
             turtle.forward(radius)
-            turtle.left( x * 180 - x * angle/2)
-            end_of_line = SvgTurtle(400,400)
+            turtle.left(x * 180 - x * angle/2)
+            end_of_line = SvgTurtle(400, 400)
             end_of_line.right(360 / tops * (x - top))
             for line in range(lines):
                 turtle.left(x * angle)

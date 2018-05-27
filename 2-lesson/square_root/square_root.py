@@ -4,6 +4,7 @@ def n_power(n, root):
         power *= n
     return power
 
+
 def root_binary(n, root):
     error = 0.00000001
     a = 0
@@ -19,8 +20,8 @@ def root_binary(n, root):
         p = n_power(c, root)
     return c
 
+
 def power(n, a, b):
     print(root_binary(n_power(n, a), b))
 
 power(2, 5, 3)
-

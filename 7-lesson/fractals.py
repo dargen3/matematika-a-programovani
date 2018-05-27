@@ -12,7 +12,7 @@ def color(x, y, method, c_real=-0.13, c_imag=0.75):
             return 0, 0, 0
         z = complex(x, y)
         for a in range(20):
-            z = z - (z ** 3 - 1)/(3* z ** 2)
+            z = z - (z ** 3 - 1) / (3* z ** 2)
         min_distance = distance(complex(1, 0), z)
         best_root_index = 0
         for index, root in enumerate([complex(-0.5, sqrt(3)/2), complex(-0.5, -sqrt(3)/2)]):
@@ -32,16 +32,16 @@ def color(x, y, method, c_real=-0.13, c_imag=0.75):
         for x in range(30):
             z = z ** 2 + c
             if distance(z, complex(0, 0)) > 2:
-                return 0,0,255
-        return 0,255,0
+                return 0, 0, 255
+        return 0, 255, 0
     if method == "Julia":
         z = complex(x, y)
         c = complex(c_real, c_imag)
         for x in range(30):
             z = z ** 2 + c
             if distance(z, complex(0, 0)) > 2:
-                return 0,0,255
-        return 0,255,0
+                return 0, 0, 255
+        return 0, 255, 0
 
 
 
@@ -63,6 +63,7 @@ def fractal(method, x_min, x_max, y_min, y_max, name, cr=None, ci=None):
                 xx = -3 + 6 * cx/value
             image.putpixel((x, y), color(xx, yy, method, cr, ci))
     image.save(name)
+
 
 def make_video():
     for x in range(70):

@@ -15,6 +15,7 @@ def n_square_points(n):
         points.append(list(zofka.position()))
     return points
 
+
 def chaos_game(n, iterations, r, name, random=False):
     zofka = SvgTurtle(500, 800)
     points = n_square_points(n)
@@ -43,10 +44,8 @@ def chaos_game(n, iterations, r, name, random=False):
     zofka.save(name+".svg")
 
 
-
 chaos_game(3, 10000, 0.5, "chaos_game")
 chaos_game(3, 10000, 0.4, "chaos_game_0.4")
 chaos_game(3, 10000, 0.6, "chaos_game_0.6")
 chaos_game(3, 10000, 0.5, "chaos_game_random", random=True)
 chaos_game(5, 10000, 0.4, "chaos_game_random_5_0.4", random=True)
-

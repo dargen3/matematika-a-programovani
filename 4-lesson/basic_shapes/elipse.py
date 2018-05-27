@@ -1,6 +1,7 @@
 from PIL import Image
 from math import sqrt, cos, radians
 
+
 def circle():
     r = 500
     image = Image.new("RGB", (r * 2, r * 2))

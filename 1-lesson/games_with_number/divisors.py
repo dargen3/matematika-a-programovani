@@ -5,6 +5,7 @@ def all_divisors(n):  # return number of all divisors for n
             divisors += 1
     return divisors
 
+
 def num_with_most_divisors(max):  # return list of pairs [(number, number of divisors),...] with numbers with highest number of divisors from interval (2, max)
     num_and_divisors = [(0, 0)]
     for x in range(1, max):

@@ -8,6 +8,7 @@ def collatz_sequence(n):  # return number of steps of collatz sequence for n
         count += 1
     return count
 
+
 def largest_sequence(max):  # print number from interval (2, max) which have highest number of collatz steps
     num_of_steps = 0
     number = 0

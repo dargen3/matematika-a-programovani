@@ -1,6 +1,7 @@
 import math
 from math import acos, degrees
 
+
 class SvgTurtle:
     """
     SvgTrutle is modul, which has similar behavior like normal turtle graphic in python2/3.
@@ -40,11 +41,9 @@ class SvgTurtle:
         if not back:
             self.x, self.y = nx, ny
 
-
     def connector(self, turtle):
         tx, ty = turtle.position()
         self.lines.append((self.x, self.y, tx, ty))
-
 
     def point(self, x, y):
         self.points.append((x, y))
@@ -69,5 +68,5 @@ class SvgTurtle:
             for x1, y1, x2, y2 in self.lines:
                 file.write("<line x1=\"{}\" y1=\"{}\" x2=\"{}\" y2=\"{}\" style=\"stroke:black;stroke-width:3\" />\n".format(x1, y1, x2, y2))
             for x, y in self.points:
-                file.write("<circle cx=\"{}\" cy=\"{}\" r=\"1\" stroke=\"black\" stroke-width=\"1\" fill=\"red\" />".format(x,y))
+                file.write("<circle cx=\"{}\" cy=\"{}\" r=\"1\" stroke=\"black\" stroke-width=\"1\" fill=\"red\" />".format(x, y))
             file.write("</svg>\n")

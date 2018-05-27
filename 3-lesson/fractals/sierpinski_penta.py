@@ -3,7 +3,6 @@ sys.path.insert(0, '/home/dargen3/python/matematika_a_programovani/1-lesson/grap
 from svg_turtle import SvgTurtle
 
 
-
 def sierpinski_penta(depth, base, zofka):
     if depth == 0:
         for i in range(5):

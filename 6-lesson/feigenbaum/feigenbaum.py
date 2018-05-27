@@ -4,8 +4,8 @@ from svg_turtle import SvgTurtle
 
 
 def feigenbaum():
-    y_range=input("Zadej y rozsah oddelene - od nuly do 1. Napriklad 0.25-0.75: ").split("-")
-    x_range=input("Zadej x rozsah oddelene - od nuly do 1. Napriklad 0.25-0.75: ").split("-")
+    y_range = input("Zadej y rozsah oddelene - od nuly do 1. Napriklad 0.25-0.75: ").split("-")
+    x_range = input("Zadej x rozsah oddelene - od nuly do 1. Napriklad 0.25-0.75: ").split("-")
     y_range[0] = float(y_range[0])
     y_range[1] = float(y_range[1])
     x_range[0] = float(x_range[0])
@@ -16,7 +16,7 @@ def feigenbaum():
     max = 4
     y = start
     diference = int(200 * abs(1/abs(y_range[0]-y_range[1])))
-    zofka=SvgTurtle(0,0)
+    zofka = SvgTurtle(0, 0)
     for x in range(min*diference, max*diference):
         x = x/diference
         for point in range(points):

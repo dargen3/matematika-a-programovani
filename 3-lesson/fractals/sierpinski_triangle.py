@@ -16,6 +16,5 @@ def sierpinski_triangle(depth, base, zofka):
     zofka.save("sierpinski_triangle.svg")
 
 
-
 zofka = SvgTurtle(1000, 1000)
 sierpinski_triangle(6, 15, zofka)

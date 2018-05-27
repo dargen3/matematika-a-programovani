@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def NSD(a, b):  # return NSD according to euklid's algorythm
     if b < a:
         a, b = b, a
@@ -11,7 +12,7 @@ def NSD(a, b):  # return NSD according to euklid's algorythm
 
 
 def colored_image():  # show and save image with visualization of NSD
-    image = Image.new("RGB", (750,750))
+    image = Image.new("RGB", (750, 750))
     for x in range(1, 750):
         for y in range(1, 750):
             result = NSD(x, y)

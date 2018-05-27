@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def colored_image():  # show and save image with RGB combination of blue and red
     image = Image.new("RGB", (256, 256))
     for x in range(0, 256):

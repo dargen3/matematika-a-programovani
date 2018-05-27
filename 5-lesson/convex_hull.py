@@ -5,6 +5,7 @@ from svg_turtle import SvgTurtle
 from operator import itemgetter
 from math import sqrt, acos, degrees, radians
 
+
 def generate_points(n):
     points = []
     for point in range(n):
@@ -13,8 +14,10 @@ def generate_points(n):
         points.append((x, y))
     return points
 
+
 def calculate_length(a, b):
     return sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
+
 
 def is_convex(ab, lines):
     xa = ab[0]
@@ -27,7 +30,7 @@ def is_convex(ab, lines):
         xd = line[2]
         yd = line[3]
         try:
-            x =((xa * yb - ya * xb) * (xc - xd) - (xa - xb) * (xc * yd - yc * xd)) / (
+            x = ((xa * yb - ya * xb) * (xc - xd) - (xa - xb) * (xc * yd - yc * xd)) / (
                         (xa - xb) * (yc - yd) - (ya - yb) * (xc - xd))
             y = ((xa * yb - ya * xb) * (yc - yd) - (ya - yb) * (xc * yd - yc * xd)) / (
                         (xa - xb) * (yc - yd) - (ya - yb) * (xc - xd))
@@ -54,7 +57,7 @@ def convex_hull(points):
     points_angles = [[points[0], 0]] + sorted(points_angles, key=itemgetter(1))
     points = [x[0] for x in points_angles]
     zofka = SvgTurtle(1000, 1000)
-    for x,y in points:
+    for x, y in points:
         zofka.point(x, y)
     count = 1
     while count != 0:
@@ -77,7 +80,6 @@ def convex_hull(points):
     for x in range(len(points)):
         zofka.line(points[x][0], points[x][1], points[x - 1][0], points[x - 1][1])
     zofka.save("convex_hull.svg")
-
 
 
 convex_hull(generate_points(100))

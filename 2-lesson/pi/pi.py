@@ -2,6 +2,7 @@ from time import time
 from random import random
 from math import sqrt, factorial
 
+
 def gregory_leibniz():
     start = time()
     sign = 1
@@ -12,6 +13,7 @@ def gregory_leibniz():
         divider += 2
         sign *= -1
     print(pi)
+
 
 def monte_carlo():
     start = time()
@@ -38,6 +40,7 @@ def madhava():
         sign *= -1
     print(sqrt(12) * pi)
 
+
 def riemann_2():
     start = time()
     pi = 0
@@ -46,6 +49,7 @@ def riemann_2():
         pi += 1 / (divider ** 2)
         divider += 1
     print(sqrt(pi*6))
+
 
 def cudnov():
     start = time()
@@ -56,6 +60,7 @@ def cudnov():
         k += 1
     print((426880 * sqrt(10005))/sum)
 
+
 def BBP():
     start = time()
     pi = 0
@@ -64,6 +69,7 @@ def BBP():
         pi += 1 / (16 ** k) * (4 / (8 * k + 1) - 2 / (8 * k + 4) - 1 / (8 * k + 5) - 1 / (8 * k + 6))
         k += 1
     print(pi)
+
 
 def Brent_Salamin():
     start = time()
@@ -82,6 +88,7 @@ def Brent_Salamin():
         p = p1
     print(((a + b)**2) / (4 * t))
 
+
 def Archimedes():
     start = time()
     a = 2 * sqrt(3)
@@ -93,11 +100,12 @@ def Archimedes():
         b = b1
     print(a, b)
 
-#gregory_leibniz()
-#monte_carlo()
-#madhava()
-#riemann_2()
-#cudnov()
-#BBP()
-#Brent_Salamin()
+
+gregory_leibniz()
+monte_carlo()
+madhava()
+riemann_2()
+cudnov()
+BBP()
+Brent_Salamin()
 Archimedes()

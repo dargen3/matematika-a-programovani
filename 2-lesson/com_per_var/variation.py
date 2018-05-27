@@ -2,6 +2,7 @@ from combination import combinations
 from permutation import permutation
 from pprint import pprint
 
+
 def variations(list_for_variations, k, repetition=False):
     per = []
     for c in combinations(list_for_variations, k, repetition):
@@ -18,4 +19,3 @@ def variations(list_for_variations, k, repetition=False):
 pprint(variations(["A", "B", "C", "D"], 2, repetition=True))
 print("\n\n\n")
 pprint(variations(["A", "B", "C", "D"], 2))
-

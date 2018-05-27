@@ -4,8 +4,8 @@ from random import randint, choice
 def bayes(cubes, attempts):
     f = 0
     n = 0
-    normal_cube = [1,2,3,4,5,6]
-    false_cube = [6,6,6,6,6,6]
+    normal_cube = [1, 2, 3, 4, 5, 6]
+    false_cube = [6, 6, 6, 6, 6, 6]
     for y in range(100000):
         numbers = []
         cube = randint(1, cubes)
@@ -24,7 +24,3 @@ def bayes(cubes, attempts):
                 f += 1
     print(n/(n+f))
 bayes(100, 3)
-
-
-
-

@@ -1,6 +1,6 @@
 def non_random(file):
     with open(file, "r") as file:
-        numbers = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+        numbers = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
         count = 0
         for x in file.read():
             try:
@@ -19,7 +19,6 @@ def non_random(file):
             print("nahodna data")
         print("hodnota chi kvadratu:", chi_test)
         print("\n\n\n")
-
 
 
 non_random("random_data/random1.txt")

@@ -7,6 +7,7 @@ def NSD(a, b):  # return NSD according to euklid's algorythm
         b = modulo
     return a
 
+
 def sequence(max):  # return first number of sequence, which are higher then max
     sequence = [1, 1]  # first and second item of sequence are 1, 1. all another number is addition of two previous number and their NSD
     while sequence[-1] < max:

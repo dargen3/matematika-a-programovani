@@ -28,6 +28,7 @@ def is_there_intersection(ab, lines):
             return True
     return False
 
+
 def generate_points(n):
     points = []
     for point in range(n):
@@ -36,8 +37,10 @@ def generate_points(n):
         points.append((x, y))
     return points
 
+
 def calculate_length(a, b):
     return sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
+
 
 def triangulation(n):
     points = generate_points(n)
@@ -45,19 +48,14 @@ def triangulation(n):
     for ia, a in enumerate(points):
         for ib, b in enumerate(points):
             if ib > ia:
-                lines.append((a,b,calculate_length(a,b)))
+                lines.append((a, b, calculate_length(a, b)))
     lines = sorted(lines, key=itemgetter(2))
     zofka = SvgTurtle(1000, 1000)
     printed_lines = []
     for line in lines:
         if not is_there_intersection((line[0][0], line[0][1], line[1][0], line[1][1]), printed_lines):
-            zofka.line(line[0][0], line[0][1],line[1][0],line[1][1])
-            printed_lines.append((line[0][0], line[0][1],line[1][0],line[1][1]))
+            zofka.line(line[0][0], line[0][1], line[1][0], line[1][1])
+            printed_lines.append((line[0][0], line[0][1], line[1][0], line[1][1]))
     zofka.save("triangulation.svg")
 
 triangulation(100)
-
-
-
-
-

@@ -1,6 +1,7 @@
 from PIL import Image
 from math import sin, cos, radians
 
+
 def spiral(image):
     for angle in range(1, 360*50*20*10):
         try:
@@ -10,7 +11,6 @@ def spiral(image):
             image.putpixel((x + 500, y + 500), (255, 255, 255))
         except IndexError:
             pass
-
 
 
 def squares(image):
@@ -31,9 +31,6 @@ def squares(image):
                     image.putpixel((x * 100 + y, z * 100 + m), colors[index % 2])
                 index += 1
         index = original_index + 1
-
-
-
 
 
 image = Image.new("RGB", (1000, 1000))

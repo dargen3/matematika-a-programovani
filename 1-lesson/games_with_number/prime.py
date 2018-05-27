@@ -1,16 +1,18 @@
 from math import sqrt
 
+
 def is_prime(potencial_prime):  # return boolean value, whether number is prime number
     if potencial_prime == 1:
         return False
     elif potencial_prime == 2:
         return True
-    elif potencial_prime %2 == 0:
+    elif potencial_prime % 2 == 0:
         return False
     for x in range(3, int(sqrt(potencial_prime))+1, 2):
         if potencial_prime % x == 0:
             return False
     return True
+
 
 def sum_of_prime_withou_three(max):  # print sum of all prime numbers in interval (1, max) which not contain 3
     sum_of_primes = 0

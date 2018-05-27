@@ -3,15 +3,15 @@ from random import randint
 
 
 fractals = {
-    "kv":{
+    "kv": {
         "start": "F--F--F",
-        "predpisy": {"F":"F+F--F+F"},
-        "rules": {"F": "forward_10", "+":"turn_60", "-":"turn_-60"},
+        "predpisy": {"F": "F+F--F+F"},
+        "rules": {"F": "forward_10", "+": "turn_60", "-": "turn_-60"},
         "iters": 4},
-    "st":{
+    "st": {
         "start": "A",
-        "predpisy": {"A":"B-A-B", "B":"A+B+A"},
-        "rules": {"A": "forward_5", "B":"forward_5", "+":"turn_60", "-":"turn_-60"},
+        "predpisy": {"A": "B-A-B", "B": "A+B+A"},
+        "rules": {"A": "forward_5", "B": "forward_5", "+": "turn_60", "-": "turn_-60"},
         "iters": 6},
     "hk": {
         "start": "A",
@@ -38,11 +38,7 @@ fractals = {
         "predpisy": ["F", "F[+F]F[-F]F", "F[+F]F", "F[-F]F"],
         "rules": {"F": "forward_5", "+": "turn_30", "-": "turn_-30"},
         "iters": 5}
-
 }
-
-
-
 
 
 def l_system(name):
@@ -66,7 +62,7 @@ def l_system(name):
             actual_string = ""
             for y in final_string:
                 if y in predpisy[0]:
-                    actual_string += predpisy[randint(1,len(predpisy)-1)]
+                    actual_string += predpisy[randint(1, len(predpisy)-1)]
                 else:
                     actual_string += y
             final_string = actual_string

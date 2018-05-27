@@ -55,4 +55,3 @@ if __name__ == '__main__':
     pprint(combinations(["a", "b", "c", "d"], 2))
     pprint("\n\n\n")
     pprint(combinations(["a", "b", "c", "d"], 2, repetition=True))
-

@@ -1,5 +1,7 @@
 from random import random
 from math import sin, cos, radians, degrees
+
+
 def generate_line(n, length, scope):
     lines = []
     for a in range(n):
@@ -10,6 +12,7 @@ def generate_line(n, length, scope):
         y2 = sin(radians(angle)) * length + y1
         lines.append((x1, y1, x2, y2))
     return lines
+
 
 def find_intersections(lines):
     for indexab, ab in enumerate(lines):
@@ -32,4 +35,3 @@ def find_intersections(lines):
                     print(x, y)
 
 find_intersections(generate_line(100, 10, 20))
-

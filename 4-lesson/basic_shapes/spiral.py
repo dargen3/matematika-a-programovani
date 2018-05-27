@@ -1,6 +1,7 @@
 from PIL import Image
 from math import sin, cos, radians
 
+
 def spiral():
     image = Image.new("RGB", (1000, 1000))
     for angle in range(1, 360*50*10):

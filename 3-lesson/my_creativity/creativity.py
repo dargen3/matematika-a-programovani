@@ -2,6 +2,7 @@ import sys
 sys.path.insert(0, '/home/dargen3/python/matematika_a_programovani/1-lesson/graphic/')
 from svg_turtle import SvgTurtle
 
+
 def my_picture():
     zofka = SvgTurtle(500, 500)
     angle = 1

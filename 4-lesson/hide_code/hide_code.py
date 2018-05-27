@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def code():
     image = Image.new("RGB", (168, 168))
     hide_string = """ In the beginning God created the heavens and the earth. 2 Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.

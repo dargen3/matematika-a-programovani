@@ -1,8 +1,9 @@
 from PIL import Image
 from math import sqrt
 
+
 def triangle():
-    image = Image.new("RGB", (500,500))
+    image = Image.new("RGB", (500, 500))
     points = [[372, 299], [1, 200], [372, 101]]
     sqrt3 = sqrt(3)
     for x in range(500):

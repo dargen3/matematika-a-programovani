@@ -2,7 +2,6 @@ from PIL import Image
 from math import sqrt
 
 
-
 def circle(image, r, value, moving):
     for x in range(2 * (r + 1) + moving):
         for y in range(2 * (r + 1) + moving):
@@ -12,7 +11,6 @@ def circle(image, r, value, moving):
 image = Image.new("RGB", (500, 500))
 circle(image, 250, 255, 0)
 image.save("circle.png")
-
 
 
 def cirle_in_circle(image, r):

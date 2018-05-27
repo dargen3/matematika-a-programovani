@@ -5,9 +5,9 @@ def game(mode):
     win = 0
     iteration = 100000
     for y in range(iteration):
-        choices = [1,2,3]
-        location = randint(1,3)
-        tip = randint(1,3)
+        choices = [1, 2, 3]
+        location = randint(1, 3)
+        tip = randint(1, 3)
         hl = list(choices)
         hl.remove(location)
         try:
@@ -29,4 +29,3 @@ def game(mode):
 game("same")
 game("random")
 game("change")
-
