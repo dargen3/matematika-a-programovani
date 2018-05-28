@@ -10,9 +10,7 @@ def create_maze(n):
 
 def solve_maze(maze):
     n = len(maze)
-    # pprint(maze)
     visited = [((0, 0),(0, 0))]
-    visited_points = [(0, 0)]
     last_len_visited = len(visited)
     to_jump = [(0, 0)]
     roads = []
@@ -34,12 +32,11 @@ def solve_maze(maze):
             for actual_point in new_points:
                 actual_x = actual_point[0]
                 actual_y = actual_point[1]
-                if (actual_x, actual_y) in visited_points:
+                if (actual_x, actual_y) in [x[1] for x in visited]:
                     continue
                 else:
                     if maze[actual_x][actual_y] != 0:
                         visited.append(((x, y),(actual_x, actual_y)))
-                        visited_points.append((actual_x, actual_y))
                     if (actual_x, actual_y) not in points_new_jumps:
                         points_new_jumps.append((actual_x, actual_y))
                 if maze[actual_x][actual_y] == 0:
