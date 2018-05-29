@@ -10,5 +10,17 @@ Slabé stránky:
 Zameřenost hlavně na funkčnost skriptu. Kód tedy není vždy úplně "krásný". 
 Málo kreativity a prozkoumávání.
 
-Komentáře:
+Komentáře
+# 1.lekce: Úvod do předmětu, programátorská rozcvička
+# 2.lekce: Kombinatorika, výpočty (generování kombinací, kombinační čísla, umocňování, výpočet pí, ...) 
+# 3.lekce: Geometrie a geometrické operace: želví grafika, úhly
+# 4.lekce: Geometrie a geometrické operace: bitmapová grafika, vykreslování základních geometrických objektů 
+# 5.lekce: Základní geometrické algoritmy
+# 6.lekce: Fraktály a chaos, L-systémy (Sierpinsky, Hilbert)
+# 7.lekce: Fraktály a chaos, komplexní čísla (Newton, Mandelbrot, Julia)
+# 8.lekce: Lineární transformace v rovině, matice, MRCM (a opět trocha fraktálů)
+# 9.lekce: Pravděpodobnost a statistika (náhodná čísla, hry s náhodou, ...) 
+# 10.lekce: Analýza dat (lineární regrese, detekce shluků)
+# 11.lekce: Grafy a bludiště: aplikace grafových algoritmů v kontextu řešení bludišť
+# 12.lekce: Grafy a bludiště: generování zadání
 
