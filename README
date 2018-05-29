@@ -10,17 +10,41 @@ Slabé stránky:
 Zameřenost hlavně na funkčnost skriptu. Kód tedy není vždy úplně "krásný". 
 Málo kreativity a prozkoumávání.
 
+
+
+
 Komentáře
 # 1.lekce: Úvod do předmětu, programátorská rozcvička
-# 2.lekce: Kombinatorika, výpočty (generování kombinací, kombinační čísla, umocňování, výpočet pí, ...) 
-# 3.lekce: Geometrie a geometrické operace: želví grafika, úhly
-# 4.lekce: Geometrie a geometrické operace: bitmapová grafika, vykreslování základních geometrických objektů 
-# 5.lekce: Základní geometrické algoritmy
-# 6.lekce: Fraktály a chaos, L-systémy (Sierpinsky, Hilbert)
-# 7.lekce: Fraktály a chaos, komplexní čísla (Newton, Mandelbrot, Julia)
-# 8.lekce: Lineární transformace v rovině, matice, MRCM (a opět trocha fraktálů)
-# 9.lekce: Pravděpodobnost a statistika (náhodná čísla, hry s náhodou, ...) 
-# 10.lekce: Analýza dat (lineární regrese, detekce shluků)
-# 11.lekce: Grafy a bludiště: aplikace grafových algoritmů v kontextu řešení bludišť
-# 12.lekce: Grafy a bludiště: generování zadání
+- v adresáři graphic/stars je 4 cípá hvězda dle zadání a také hvězdy s jiným počtem ramen, ty se ale nevykreslují úplně správně
+- v adresáři graphic/ulam_spirals jsou obdoby ulamovy spirály
 
+# 2.lekce: Kombinatorika, výpočty (generování kombinací, kombinační čísla, umocňování, výpočet pí, ...) 
+- Je implementováno 8 metod pro výpočet Pí
+
+# 3.lekce: Geometrie a geometrické operace: želví grafika, úhly
+- z fraktálu jsem naimplementoval sierpinskeho trojuhelník a pětiuhelník
+- v adresáři my_creativity je jednoduchý pokus, co se stane, když se budu pohybovat a pravidleně měnit úhel
+
+# 4.lekce: Geometrie a geometrické operace: bitmapová grafika, vykreslování základních geometrických objektů 
+- v adresáři effects je obrázek waves.png, který zobrazuje závislost mocnin sinusu 
+
+# 5.lekce: Základní geometrické algoritmy
+
+# 6.lekce: Fraktály a chaos, L-systémy (Sierpinsky, Hilbert)
+- Skript pro vizualizaci L-systémů považuju za robustní a propracovaný.
+
+# 7.lekce: Fraktály a chaos, komplexní čísla (Newton, Mandelbrot, Julia)
+- Video movie.mp4 zobrazující Juliovu množinu měnící se v zavíslosti na parametrech
+
+# 8.lekce: Lineární transformace v rovině, matice, MRCM (a opět trocha fraktálů)
+- Použitý objektový styl namísto funkcionálního, který byl doporučován
+
+# 9.lekce: Pravděpodobnost a statistika (náhodná čísla, hry s náhodou, ...) 
+
+# 10.lekce: Analýza dat (lineární regrese, detekce shluků)
+
+# 11.lekce: Grafy a bludiště: aplikace grafových algoritmů v kontextu řešení bludišť
+- Implementována číslená skákačka a robot v bludišti
+
+# 12.lekce: Grafy a bludiště: generování zadání
+- Skript pro tvorbu braid bludiště
