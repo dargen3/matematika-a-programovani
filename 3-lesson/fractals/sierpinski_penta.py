@@ -26,4 +26,4 @@ def sierpinski_penta(depth, base, zofka):
     zofka.save("sierpinski_penta.svg")
 
 zofka = SvgTurtle(1000, 1000)
-sierpinski_penta(4, 10, zofka)
+sierpinski_penta(3, 10, zofka)
